@@ -6,7 +6,7 @@ public class Nav implements Callable<Integer> {
     Random rd = new Random();
     int V1;
 
-    int S = rd.nextInt(100000);
+    int S = rd.nextInt(1000000000);
     int SrV;
     int V;
     int Kolv = 0;
@@ -19,7 +19,7 @@ public class Nav implements Callable<Integer> {
     @Override
     public Integer call() throws Exception {
         for (int i = 0; S > 0;) {
-           V1=rd.nextInt(100)+60;
+           V1=rd.nextInt(100)+1;
            V=V+V1;
            Kolv++;
            SrV=V/Kolv;
