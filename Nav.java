@@ -24,7 +24,7 @@ public class Nav implements Callable<Integer> {
            Kolv++;
            SrV=V/Kolv;
             t = S / V1;
-            S=S-a;
+            S=S-V1;
             a = (int) (V1 * 3.6);
             b = (int) ((SrV*3.6));
             System.out.println("distance "+S/1000+" KM");
