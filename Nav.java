@@ -11,21 +11,25 @@ public class Nav implements Callable<Integer> {
     int V;
     int Kolv = 0;
     private int id;
+    int a;
+    int b;
     public Nav(int id) {
         this.id = id;
     }
     @Override
     public Integer call() throws Exception {
-        for (int i = 0; S > 0; i++) {
+        for (int i = 0; S > 0;) {
            V1=rd.nextInt(100)+60;
            V=V+V1;
            Kolv++;
            SrV=V/Kolv;
             t = S / V1;
-            S=S-V1;
-            System.out.println("distance "+S+" M");
-            System.out.println("speed "+V+" M/S");
-            System.out.println("average speed "+SrV+" M/S");
+            S=S-a;
+            a = (int) (V1 * 3.6);
+            b = (int) ((SrV*3.6));
+            System.out.println("distance "+S/1000+" KM");
+            System.out.println("speed "+a+" KM/S");
+            System.out.println("average speed "+b+" KM/S");
             System.out.println("time left "+t+" S");
             System.out.println();
             try {
