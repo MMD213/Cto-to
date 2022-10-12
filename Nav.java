@@ -1,23 +1,20 @@
 import java.util.Random;
-import java.util.concurrent.Callable;
 
-public class Nav implements Callable<Integer> {
+public class Nav implements Runnable {
     int t = 0;
     Random rd = new Random();
     int V1;
 
-    int S = rd.nextInt(1000000000);
+    int S = rd.nextInt(10000);
     int SrV;
     int V;
     int Kolv = 0;
     private int id;
     int a;
-    int b;
-    public Nav(int id) {
-        this.id = id;
-    }
+    int b=1;
+
     @Override
-    public Integer call() throws Exception {
+    public void run() {
         for (int i = 0; S > 0;) {
            V1=rd.nextInt(100)+1;
            V=V+V1;
@@ -38,7 +35,6 @@ public class Nav implements Callable<Integer> {
                 e.printStackTrace();
             }
         }
-        return null;
     }
 }
 
