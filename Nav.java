@@ -23,7 +23,7 @@ public class Nav implements Callable<Integer> {
            V=V+V1;
            Kolv++;
            SrV=V/Kolv;
-            t = S / V1;
+            t = S / SrV;
             S=S-V1;
             a = (int) (V1 * 3.6);
             b = (int) ((SrV*3.6));
